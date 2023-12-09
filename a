@@ -1,0 +1,199 @@
+@media only screen and (min-width: 1870px){
+    .links ul li{
+        height: 20px;
+        display: inline-block;
+        margin: 0px 6em 0px 6em;
+        font-family: montserratbold;
+        font-size: var(--text-size);
+    }
+}
+
+@media only screen and (max-width:1900px) {
+    .links ul li{
+        height: 20px;
+        display: inline-block;
+        margin: 0px 4em 0px 4em;
+        font-family: montserratbold;
+        font-size: var(--text-size);
+    }
+}
+@media only screen and (max-width:1560px) {
+    .links ul li{
+        height: 20px;
+        display: inline-block;
+        margin: 0px 3em 0px 3em;
+        font-family: montserratbold;
+        font-size: var(--text-size);
+    }
+}
+@media only screen and (max-width:1380px) {
+    .links ul li{
+        height: 20px;
+        display: inline-block;
+        margin: 0px 2em 0px 2em;
+        font-family: montserratbold;
+        font-size: var(--text-size);
+    }
+}
+@media only screen and (max-width:1240px) {
+    .links ul li{
+        height: 20px;
+        /* display: inline-block; */
+        margin: 0px 1em 0px 1em;
+        font-family: montserratbold;
+        font-size: var(--text-size);
+    }
+}
+@media only screen and (max-width:1070px) {
+    
+
+    .flex-container .links{
+        visibility: hidden;
+        /* display: none; */
+    }
+    .flex-container .contact-btn{
+        /* display: none; */
+        visibility: hidden;
+    }
+    .flex-container{
+        flex-direction: column;
+        background-color: white;
+    }
+    .top-nav-btn{
+        position: absolute;
+        display: inline-block;
+        visibility: visible;
+        top: 25px;
+        right: 15px;
+    }
+    .top-btn{
+        height: 30px;
+        width: 30px;
+        background-color: var(--orange);
+        border: none;
+        border-radius: 4px;
+        padding: 8px;
+    }
+    .top-btn i{
+        color: white;
+    }
+
+    .after-click{
+        z-index: -10;
+        background-color: white;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        visibility: hidden;
+        height: 250px;
+        width: 100%;
+        margin-top: -500px;
+        justify-content: center;
+    }
+    .title{
+        margin-top: 4px;
+    }
+    .after-click .links{
+        /* z-index: -10; */
+        visibility: inherit;
+    }
+    .after-click .contact-btn{
+        /* z-index: -10; */
+        visibility: inherit;
+        margin-left: auto;
+        margin-right: auto;        
+    }
+    .after-click .links ul li{
+        text-align: center;
+        display: block;
+        height: 40px;
+    }
+
+    @keyframes sidebar {
+        from{
+            margin-top: -500px;
+            
+        }
+        to{
+            margin-top: 80px;
+        }
+    }
+    @keyframes sidebarclose {
+        from{
+            margin-top: 80px;
+            
+        }
+        to{
+            margin-top: -500px;
+        }
+    }
+
+}
+
+
+
+
+
+/* home */
+.container{
+    display: grid;
+    z-index: 1;
+    padding-top: 80px;
+    height: 100vh;
+    background-color: rgb(255, 85, 0, 7%);
+    grid-template-areas:
+    'item1 item2';
+    grid-template-columns: 70% 30%;
+}
+.item1{
+    grid-area: item1;
+    background-color: rgb(255, 85, 0, 7%);
+
+}
+.item2{
+    grid-area: item2;
+    z-index: 1;
+    background-color: rgb(255, 85, 0, 45%);
+}
+/* .item2::before{
+    display: inline-block;
+    position: relative;
+    z-index: -1;
+    content: "";
+    height: 80%;
+    width: 50%;
+    right: 500px;
+    background-color: rgb(255, 85, 0, 45%);
+    /* background-color: #FF580/3; */
+    /* transform: rotate(20deg); */
+/* } */ 
+
+
+
+.cursor{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #ff3f05, #e73c7e, #23a6d5, #0D173C, #23d5ab);
+    background-color: var(--dark-blue);
+    background-size: 1000% 1000%;
+    position: fixed;
+    z-index: 100;
+    animation: gradient 8s ease infinite;
+}
+
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 50% 100%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
